@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoTips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla de inicio -->
+  <div id="pantallaInicio">
+    <h1>🌱 EcoTips</h1>
+    <img src="ecologia.jpg" alt="Ecología" id="imagenInicio">
+    <button onclick="mostrarSeccion('pantallaTareas')">Comenzar</button>
+  </div>
+
+  <!-- Sección de tareas -->
+  <div id="pantallaTareas" class="seccionOculta">
+    <h2>📋 Tareas ecológicas</h2>
+    <select id="selectorTareas">
+      <option disabled selected>Selecciona una tarea</option>
+    </select>
+    <br><br>
+    <button onclick="irACamara()">Ir a Tomar Evidencia 📸</button>
+  </div>
+
+  <!-- Cámara -->
+  <div id="pantallaCamara" class="seccionOculta">
+    <h2>📷 Toma tu evidencia</h2>
+    <p id="tareaSeleccionadaTexto"></p>
+    <video id="video" autoplay playsinline></video><br>
+    <button onclick="tomarFoto()">📸 Capturar</button>
+    <button onclick="mostrarSeccion('pantallaRealizadas')">Ver tareas realizadas ✅</button>
+    <canvas id="canvas" style="display: none;"></canvas>
+  </div>
+
+  <!-- Tareas realizadas -->
+  <div id="pantallaRealizadas" class="seccionOculta">
+    <h2>✅ Tareas Realizadas</h2>
+    <div id="fotosGuardadas"></div>
+    <button onclick="mostrarSeccion('pantallaTareas')">← Volver</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

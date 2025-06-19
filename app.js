@@ -13,6 +13,8 @@ const tareas = [
 ];
 
 let tareaSeleccionada = "";
+let video = null, canvas = null, context = null;
+let currentStream;
 
 function cargarTareas() {
   const selector = document.getElementById("selectorTareas");
@@ -49,18 +51,25 @@ function irACamara() {
   mostrarSeccion('pantallaCamara');
 }
 
-let video = null, canvas = null, context = null;
+function activarCamara(facingMode = "user") {
+  if (currentStream) {
+    currentStream.getTracks().forEach(track => track.stop());
+  }
 
-function activarCamara() {
   video = document.getElementById("video");
   canvas = document.getElementById("canvas");
   context = canvas.getContext("2d");
 
-  navigator.mediaDevices.getUserMedia({ video: true })
+  navigator.mediaDevices.getUserMedia({ video: { facingMode } })
     .then(stream => {
+      currentStream = stream;
       video.srcObject = stream;
     })
     .catch(err => alert("No se puede acceder a la cámara: " + err));
+}
+
+function cambiarCamara(modo) {
+  activarCamara(modo);
 }
 
 function tomarFoto() {

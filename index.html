@@ -1,4 +1,4 @@
-!DOCTYPE html>Add commentMore actions
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -21,12 +21,17 @@
     </select>
     <br><br>
     <button onclick="irACamara()">Ir a Tomar Evidencia 📸</button>
+    <button onclick="mostrarSeccion('pantallaRealizadas')">Ver tareas realizadas ✅</button>
   </div>
 
   <!-- Cámara -->
   <div id="pantallaCamara" class="seccionOculta">
     <h2>📷 Toma tu evidencia</h2>
     <p id="tareaSeleccionadaTexto"></p>
+    <select id="selectorCamara" onchange="cambiarCamara(this.value)">
+      <option value="user">📱 Frontal</option>
+      <option value="environment">🌄 Trasera</option>
+    </select><br>
     <video id="video" autoplay playsinline></video><br>
     <button onclick="tomarFoto()">📸 Capturar</button>
     <button onclick="mostrarSeccion('pantallaRealizadas')">Ver tareas realizadas ✅</button>

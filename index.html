@@ -2,31 +2,50 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>EcoTips</title>
+  <title>EcoTips Pro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Inicio de sesión -->
+  <div id="pantallaLogin">
+    <h1>🌱 Bienvenido a EcoTips</h1>
+    <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre">
+    <br>
+    <button onclick="iniciarSesion()">Ingresar</button>
+  </div>
+
   <!-- Pantalla de inicio -->
-  <div id="pantallaInicio">
-    <h1>🌱 EcoTips</h1>
+  <div id="pantallaInicio" class="seccionOculta">
+    <h2>Hola <span id="usuarioActivo"></span> 👋</h2>
+    <p id="fraseEcologica"></p>
     <img src="imagen 1.jpg" alt="Ecología" id="imagenInicio">
-    <button onclick="mostrarSeccion('pantallaTareas')">Comenzar</button>
+    <p>🎨 Tema:
+      <select id="selectorTema" onchange="cambiarTema(this.value)">
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+        <option value="rosado">Rosado</option>
+      </select>
+    </p>
+    <p>🏆 Nivel: <span id="nivelUsuario"></span></p>
+    <p>⭐ Puntos: <span id="puntosTotales">0</span></p>
+    <button onclick="mostrarSeccion('pantallaTareas')">📋 Ver Tareas</button>
+    <button onclick="mostrarSeccion('pantallaRealizadas')">✅ Tareas Realizadas</button>
   </div>
 
   <!-- Sección de tareas -->
   <div id="pantallaTareas" class="seccionOculta">
-    <h2>📋 Tareas ecológicas</h2>
+    <h2>Tareas ecológicas</h2>
     <select id="selectorTareas">
       <option disabled selected>Selecciona una tarea</option>
     </select>
     <br><br>
-    <button onclick="irACamara()">Ir a Tomar Evidencia 📸</button>
-    <button onclick="mostrarSeccion('pantallaRealizadas')">Ver tareas realizadas ✅</button>
+    <button onclick="irACamara()">📸 Tomar Evidencia</button>
+    <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
   </div>
 
   <!-- Cámara -->
   <div id="pantallaCamara" class="seccionOculta">
-    <h2>📷 Toma tu evidencia</h2>
+    <h2>📷 Evidencia</h2>
     <p id="tareaSeleccionadaTexto"></p>
     <select id="selectorCamara" onchange="cambiarCamara(this.value)">
       <option value="user">📱 Frontal</option>
@@ -34,15 +53,16 @@
     </select><br>
     <video id="video" autoplay playsinline></video><br>
     <button onclick="tomarFoto()">📸 Capturar</button>
-    <button onclick="mostrarSeccion('pantallaRealizadas')">Ver tareas realizadas ✅</button>
+    <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
     <canvas id="canvas" style="display: none;"></canvas>
   </div>
 
   <!-- Tareas realizadas -->
   <div id="pantallaRealizadas" class="seccionOculta">
-    <h2>✅ Tareas Realizadas</h2>
+    <h2>✅ Tareas realizadas</h2>
     <div id="fotosGuardadas"></div>
-    <button onclick="mostrarSeccion('pantallaTareas')">← Volver</button>
+    <button onclick="descargarHistorial()">⬇️ Exportar Evidencia</button>
+    <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
   </div>
 
   <script src="app.js"></script>

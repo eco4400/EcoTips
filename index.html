@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>EcoTips Pro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Inicio de sesión -->
   <div id="pantallaLogin">
     <h1>🌱 Bienvenido a EcoTips</h1>
-    <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre">
-    <br>
+    <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre" />
+    <br />
     <button onclick="iniciarSesion()">Ingresar</button>
   </div>
 
@@ -18,7 +18,7 @@
   <div id="pantallaInicio" class="seccionOculta">
     <h2>Hola <span id="usuarioActivo"></span> 👋</h2>
     <p id="fraseEcologica"></p>
-    <img src="imagen 1.jpg" alt="Ecología" id="imagenInicio">
+    <img src="imagen 1.jpg" alt="Ecología" id="imagenInicio" />
     <p>🎨 Tema:
       <select id="selectorTema" onchange="cambiarTema(this.value)">
         <option value="verde">Verde</option>
@@ -38,7 +38,14 @@
     <select id="selectorTareas">
       <option disabled selected>Selecciona una tarea</option>
     </select>
-    <br><br>
+    <br />
+    <img
+      id="imagenTareaEjemplo"
+      src=""
+      alt="Ejemplo de tarea"
+      style="display: none"
+    />
+    <br />
     <button onclick="irACamara()">📸 Tomar Evidencia</button>
     <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
   </div>
@@ -50,18 +57,20 @@
     <select id="selectorCamara" onchange="cambiarCamara(this.value)">
       <option value="user">📱 Frontal</option>
       <option value="environment">🌄 Trasera</option>
-    </select><br>
-    <video id="video" autoplay playsinline></video><br>
+    </select>
+    <br />
+    <video id="video" autoplay playsinline></video>
+    <br />
     <button onclick="tomarFoto()">📸 Capturar</button>
     <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
-    <canvas id="canvas" style="display: none;"></canvas>
+    <canvas id="canvas" style="display: none"></canvas>
   </div>
 
   <!-- Tareas realizadas -->
   <div id="pantallaRealizadas" class="seccionOculta">
     <h2>✅ Tareas realizadas</h2>
     <div id="fotosGuardadas"></div>
-    <button onclick="descargarHistorial()">⬇️ Exportar Evidencia</button>
+    <button onclick="descargarHistorial()">⬇ Exportar Evidencia</button>
     <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
   </div>
 

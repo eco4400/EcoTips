@@ -19,6 +19,7 @@
     <h2>Hola <span id="usuarioActivo"></span> 👋</h2>
     <p id="fraseEcologica"></p>
     <img src="imagen 1.jpg" alt="Ecología" id="imagenInicio" />
+    
     <p>🎨 Tema:
       <select id="selectorTema" onchange="cambiarTema(this.value)">
         <option value="verde">Verde</option>
@@ -26,8 +27,19 @@
         <option value="rosado">Rosado</option>
       </select>
     </p>
-    <p>🏆 Nivel: <span id="nivelUsuario"></span></p>
-    <p>⭐ Puntos: <span id="puntosTotales">0</span></p>
+
+    <!-- Nuevo diseño de nivel y puntos -->
+    <div class="infoUsuario">
+      <div class="tarjetaNivel">
+        🏆 Nivel:
+        <span id="nivelUsuario"></span>
+      </div>
+      <div class="tarjetaPuntos">
+        ⭐ Puntos:
+        <span id="puntosTotales">0</span>
+      </div>
+    </div>
+
     <button onclick="mostrarSeccion('pantallaTareas')">📋 Ver Tareas</button>
     <button onclick="mostrarSeccion('pantallaRealizadas')">✅ Tareas Realizadas</button>
   </div>

@@ -1,6 +1,5 @@
 const tareas = [
   "🌿 Regar las plantas",
-  "🗑 Separar la basura",
   "🔌 Apagar aparatos eléctricos",
   "🧹 Limpiar pupitre",
   "🚫 Evitar bolsas plásticas",
@@ -9,7 +8,9 @@ const tareas = [
   "🧃 Separar residuos inorgánicos",
   "🌱 Cuidar áreas verdes",
   "🌾 Hacer composta",
-  "🎨 No rayar paredes"
+  "🎨 No rayar paredes",
+  "🚿 Cerrar el grifo mientras te lavas las manos"
+
 ];
 
 const frases = [
@@ -216,4 +217,41 @@ if (localStorage.getItem("usuarioActivo")) {
   cargarDatosUsuario();
   mostrarFraseAleatoria();
   mostrarSeccion("pantallaInicio");
+}
+function cargarTareas() {
+  const selector = document.getElementById("selectorTareas");
+  const img = document.getElementById("imagenTareaEjemplo");
+
+  selector.innerHTML = '<option disabled selected>Selecciona una tarea</option>';
+
+  tareas.forEach(t => {
+    const op = document.createElement("option");
+    op.value = t;
+    op.textContent = t;
+    selector.appendChild(op);
+  });
+
+  selector.onchange = () => {
+    const seleccion = selector.value;
+    const mapaImagenes = {
+      "🌿 Regar las plantas": "🌿 Regar las plantas.jpg",
+      "🔌 Apagar aparatos eléctricos": "🔌 Apagar aparatos eléctricos.jpg",
+      "🧹 Limpiar pupitre": "🧹 Limpiar pupitre.jpg",
+      "🚫 Evitar bolsas plásticas": "🚫 Evitar bolsas plásticas.jpg",
+      "💧 Usar botella reutilizable": "💧 Usar botella reutilizable.jpg",
+      "🍃 Separar residuos orgánicos": "🍃 Separar residuos orgánicos.jpg",
+      "🧃 Separar residuos inorgánicos": "🧃 Separar residuos inorgánicos.jpg",
+      "🌱 Cuidar áreas verdes": "🌱 Cuidar áreas verdes.jpg",
+      "🌾 Hacer composta": "🌾 Hacer composta.jpg",
+      "🎨 No rayar paredes": "🎨 No rayar paredes.jpg",
+      "🚿 Cerrar el grifo mientras te lavas las manos": "🚿 Cerrar el grifo mientras te lavas las manos.jpg"
+    };
+
+    if (mapaImagenes[seleccion]) {
+      img.src = mapaImagenes[seleccion];
+      img.style.display = "block";
+    } else {
+      img.style.display = "none";
+    }
+  };
 }

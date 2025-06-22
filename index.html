@@ -32,7 +32,8 @@
     <div class="infoUsuario">
       <div class="tarjetaNivel">
         🏆 Nivel:
-        <span id="nivelUsuario"></span>
+        <span id="nivelUsuario"></span><br />
+        <button class="btnVerNiveles" onclick="verNiveles()">Ver niveles</button>
       </div>
       <div class="tarjetaPuntos">
         ⭐ Puntos:
@@ -51,12 +52,7 @@
       <option disabled selected>Selecciona una tarea</option>
     </select>
     <br />
-    <img
-      id="imagenTareaEjemplo"
-      src=""
-      alt="Ejemplo de tarea"
-      style="display: none"
-    />
+    <img id="imagenTareaEjemplo" src="" alt="Ejemplo de tarea" style="display: none" />
     <br />
     <button onclick="irACamara()">📸 Tomar Evidencia</button>
     <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
@@ -84,6 +80,22 @@
     <div id="fotosGuardadas"></div>
     <button onclick="descargarHistorial()">⬇ Exportar Evidencia</button>
     <button onclick="mostrarSeccion('pantallaInicio')">← Volver</button>
+  </div>
+
+  <!-- Modal niveles -->
+  <div id="modalNiveles" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h3>🏅 Niveles</h3>
+      <p>🌱 Principiante: 0 - 49 puntos</p>
+      <p>🌿 Intermedio: 50 - 149 puntos</p>
+      <p>🌳 Avanzado: 150+ puntos</p>
+    </div>
+  </div>
+
+  <!-- Modal imagen grande -->
+  <div id="modalImagen" class="modal" onclick="cerrarImagenGrande()">
+    <img id="imagenGrande" />
   </div>
 
   <script src="app.js"></script>

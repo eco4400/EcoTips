@@ -135,7 +135,7 @@ body.tema-rosado {
 .btnVerNiveles {
   margin-top: 12px;
   padding: 16px 28px;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #81c784;
   width: 100%;
   max-width: 95%;
@@ -189,7 +189,7 @@ body.tema-rosado {
   color: white;
   border: none;
   padding: 14px 14px;
-  font-size: 22px;
+  font-size: 25px;
   border-radius: 14px;
   margin: 14px auto;
   max-width: 90%;
@@ -203,13 +203,20 @@ body.tema-rosado {
 .boton-tema select {
   background: transparent;
   color: white;
-  font-size: 22px;
+  font-size: 25px;
   border: none;
   outline: none;
   font-weight: bold;
   margin-left: 10px;
   width: auto;
   cursor: pointer;
+}
+
+/* Ajuste tamaño texto "Tareas realizadas" */
+#pantallaRealizadas h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2e7d32;
 }
 
 /* Responsive */
@@ -220,7 +227,7 @@ body.tema-rosado {
 
   button,
   .btnVerNiveles {
-    font-size: 22px;
+    font-size: 25px;
     padding: 22px 38px;
     width: 100%;
     max-width: 95%;
@@ -228,7 +235,7 @@ body.tema-rosado {
 
   #selectorTema {
     font-size: 80px;
-    padding: 12px 18px;
+    padding: 12px 25px;
   }
 
   select, input[type='text'] {

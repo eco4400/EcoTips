@@ -183,14 +183,31 @@ body.tema-rosado {
   border-radius: 12px;
 }
 
-/* Selector de tema */
-#selectorTema {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 2px solid #4caf50;
+/* Selector de tema como botón */
+.boton-tema {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 22px;
+  border-radius: 14px;
+  margin: 14px auto;
+  max-width: 95%;
+  width: 100%;
+  display: block;
   font-weight: bold;
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  text-align: left;
+}
+
+.boton-tema select {
+  background: transparent;
+  color: white;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin-left: 10px;
+  width: auto;
 }
 
 /* Responsive */
@@ -201,16 +218,15 @@ body.tema-rosado {
 
   button,
   .btnVerNiveles {
-    font-size: 22px;      /* aumentado de 20px a 22px */
-    padding: 22px 38px;   /* aumentado el padding */
+    font-size: 22px;
+    padding: 22px 38px;
     width: 100%;
     max-width: 95%;
   }
 
-  /* Agrandar selector de tema también */
   #selectorTema {
-    font-size: 20px;     /* nuevo tamaño de fuente */
-    padding: 14px 20px;  /* padding aumentado */
+    font-size: 20px;
+    padding: 14px 20px;
   }
 
   select, input[type='text'] {

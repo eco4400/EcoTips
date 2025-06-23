@@ -197,6 +197,7 @@ body.tema-rosado {
   display: block;
   font-weight: bold;
   text-align: left;
+  cursor: pointer;
 }
 
 .boton-tema select {
@@ -208,6 +209,7 @@ body.tema-rosado {
   font-weight: bold;
   margin-left: 10px;
   width: auto;
+  cursor: pointer;
 }
 
 /* Responsive */

@@ -201,10 +201,16 @@ body.tema-rosado {
 
   button,
   .btnVerNiveles {
-    font-size: 20px;
-    padding: 18px 32px;
+    font-size: 22px;      /* aumentado de 20px a 22px */
+    padding: 22px 38px;   /* aumentado el padding */
     width: 100%;
     max-width: 95%;
+  }
+
+  /* Agrandar selector de tema también */
+  #selectorTema {
+    font-size: 20px;     /* nuevo tamaño de fuente */
+    padding: 14px 20px;  /* padding aumentado */
   }
 
   select, input[type='text'] {

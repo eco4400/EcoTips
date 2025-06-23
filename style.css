@@ -17,12 +17,14 @@ button {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 18px 35px; /* MÁS GRANDE */
-  font-size: 20px;     /* MÁS GRANDE */
-  border-radius: 10px;
+  padding: 20px 40px;
+  font-size: 22px;
+  border-radius: 14px;
   cursor: pointer;
-  margin: 12px;
+  margin: 14px auto;
   max-width: 95%;
+  width: 100%;
+  display: block;
 }
 
 button:hover {
@@ -33,8 +35,8 @@ img#imagenInicio,
 img#imagenTareaEjemplo {
   display: block;
   margin: 40px auto;
-  width: 120vw;         /* MÁS GRANDE */
-  max-width: 850px;     /* MÁS GRANDE */
+  width: 120vw;
+  max-width: 850px;
   height: auto;
   border-radius: 35px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -131,10 +133,14 @@ body.tema-rosado {
 
 /* Botón ver niveles */
 .btnVerNiveles {
-  margin-top: 10px;
-  padding: 10px 16px;
-  font-size: 16px;
+  margin-top: 12px;
+  padding: 16px 28px;
+  font-size: 18px;
   background-color: #81c784;
+  width: 100%;
+  max-width: 95%;
+  display: block;
+  margin: 12px auto;
 }
 
 /* Modal niveles e imagen */
@@ -193,9 +199,12 @@ body.tema-rosado {
     font-size: 6.5vw;
   }
 
-  button {
-    font-size: 18px;
-    padding: 16px 28px;
+  button,
+  .btnVerNiveles {
+    font-size: 20px;
+    padding: 18px 32px;
+    width: 100%;
+    max-width: 95%;
   }
 
   select, input[type='text'] {

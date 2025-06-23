@@ -185,14 +185,14 @@ body.tema-rosado {
 
 /* Selector de tema como botón */
 .boton-tema {
-  background-color: #4caf50;
+  background-color: #ae47c3;
   color: white;
   border: none;
-  padding: 20px 40px;
-  font-size: 22px;
+  padding: 14px 14px;
+  font-size: 14px;
   border-radius: 14px;
   margin: 14px auto;
-  max-width: 95%;
+  max-width: 90%;
   width: 100%;
   display: block;
   font-weight: bold;
@@ -203,7 +203,7 @@ body.tema-rosado {
 .boton-tema select {
   background: transparent;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   border: none;
   outline: none;
   font-weight: bold;
@@ -213,7 +213,7 @@ body.tema-rosado {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   h1, h2 {
     font-size: 6.5vw;
   }
@@ -227,8 +227,8 @@ body.tema-rosado {
   }
 
   #selectorTema {
-    font-size: 20px;
-    padding: 14px 20px;
+    font-size: 80px;
+    padding: 12px 18px;
   }
 
   select, input[type='text'] {

@@ -19,16 +19,18 @@
     <h2>Hola <span id="usuarioActivo"></span> 👋</h2>
     <p id="fraseEcologica"></p>
     <img src="imagen 1.jpg" alt="Ecología" id="imagenInicio" />
-    
-    <p>🎨 Tema:
+
+    <!-- Selector de tema al estilo botón -->
+    <div class="boton-tema">
+      🎨 Tema:
       <select id="selectorTema" onchange="cambiarTema(this.value)">
         <option value="verde">Verde</option>
         <option value="azul">Azul</option>
         <option value="rosado">Rosado</option>
       </select>
-    </p>
+    </div>
 
-    <!-- Nuevo diseño de nivel y puntos -->
+    <!-- Nivel y puntos -->
     <div class="infoUsuario">
       <div class="tarjetaNivel">
         🏆 Nivel:

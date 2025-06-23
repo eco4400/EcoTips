@@ -17,12 +17,12 @@ button {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 12px 25px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 18px 35px; /* MÁS GRANDE */
+  font-size: 20px;     /* MÁS GRANDE */
+  border-radius: 10px;
   cursor: pointer;
-  margin: 10px;
-  max-width: 90%;
+  margin: 12px;
+  max-width: 95%;
 }
 
 button:hover {
@@ -33,8 +33,8 @@ img#imagenInicio,
 img#imagenTareaEjemplo {
   display: block;
   margin: 40px auto;
-  width: 110vw;
-  max-width: 700px;
+  width: 120vw;         /* MÁS GRANDE */
+  max-width: 850px;     /* MÁS GRANDE */
   height: auto;
   border-radius: 35px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -42,18 +42,18 @@ img#imagenTareaEjemplo {
 
 select,
 input[type='text'] {
-  padding: 10px;
-  font-size: 16px;
+  padding: 12px;
+  font-size: 18px;
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
   max-width: 90%;
-  width: 280px;
+  width: 300px;
 }
 
 video {
-  width: 90vw;
-  max-width: 360px;
+  width: 95vw;
+  max-width: 420px;
   margin-top: 15px;
   border: 2px solid #388e3c;
   border-radius: 8px;
@@ -67,7 +67,7 @@ video {
 
 #fotosGuardadas div {
   margin: 10px;
-  width: 150px;
+  width: 170px;
 }
 
 #fotosGuardadas img {
@@ -93,15 +93,15 @@ body.tema-rosado {
   background-color: #fce4ec;
 }
 
-/* Frase ecológica más grande y con estilo */
+/* Frase ecológica */
 #fraseEcologica {
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-style: italic;
   color: #388e3c;
   margin: 20px auto;
   max-width: 90%;
   background-color: #dcedc8;
-  padding: 10px 15px;
+  padding: 12px 18px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
@@ -119,21 +119,21 @@ body.tema-rosado {
 .tarjetaNivel,
 .tarjetaPuntos {
   background-color: #c8e6c9;
-  padding: 15px 25px;
+  padding: 18px 28px;
   border-radius: 12px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
   color: #2e7d32;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 130px;
+  min-width: 140px;
   text-align: center;
 }
 
 /* Botón ver niveles */
 .btnVerNiveles {
   margin-top: 10px;
-  padding: 6px 12px;
-  font-size: 14px;
+  padding: 10px 16px;
+  font-size: 16px;
   background-color: #81c784;
 }
 
@@ -157,7 +157,7 @@ body.tema-rosado {
   padding: 20px;
   border-radius: 12px;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   text-align: center;
 }
 
@@ -177,9 +177,9 @@ body.tema-rosado {
   border-radius: 12px;
 }
 
-/* Estilo bonito para selector de tema */
+/* Selector de tema */
 #selectorTema {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
   border: 2px solid #4caf50;
   font-weight: bold;
@@ -190,27 +190,27 @@ body.tema-rosado {
 /* Responsive */
 @media (max-width: 600px) {
   h1, h2 {
-    font-size: 5.5vw;
+    font-size: 6.5vw;
   }
 
   button {
-    font-size: 15px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 16px 28px;
   }
 
   select, input[type='text'] {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   img#imagenInicio, img#imagenTareaEjemplo {
-    width: 80vw;
-    max-width: 300px;
-    margin: 15px auto;
+    width: 95vw;
+    max-width: 350px;
+    margin: 20px auto;
   }
 
   .tarjetaNivel, .tarjetaPuntos {
-    font-size: 1em;
-    padding: 12px 20px;
-    min-width: 100px;
+    font-size: 1.2em;
+    padding: 14px 22px;
+    min-width: 110px;
   }
 }
